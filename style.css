@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background: Black;
+}
+
+
+.big-container{
+    width: 100%;
+    height: 95vh;
+    max-width: 1200px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    animation: fade 3s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fade{
+    to{opacity: 1;}
+}
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: -1;
+}
+header{
+    min-height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #fff8;
+    overflow: hidden;
+    animation: fade 2s ease-in-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+header .logo{
+    float: left;
+    margin-left: 20px;
+    font-size: 10px;
+}
+header .logo h1{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 60px;
+    text-shadow: 0 0 5px white;
+}
+header nav{
+    float: right;
+    margin-right: -40px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav ul{
+    margin-right: 30px;
+    min-width: 450px;
+}
+nav ul li{
+    list-style: none;
+    display:inline-block;
+}
+.button a{
+    color: white;
+    background:teal;
+}
+ .active{
+    background: white;
+    border-radius: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: 0 0 5px white;
+}
+a:hover{
+    color: black;
+}
+section{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 5px white;
+    animation: fade 2s ease-in-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+section h2{
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 10px;
+}
+section p{
+    line-height: 1.4;
+    margin: 15px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    color: white;
+    animation: fade 2s ease-in-out forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+.row{
+    list-style: none;
+    text-decoration: none;
+
+}
+.row li i{
+    font-size: 20px;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+}
+
+footer h2{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+footer p{
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.4;
+    letter-spacing: 2px;
+}
+@media (max-width: 1000px){
+    header .logo,
+    header nav{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+}
+@media(max-width: 850px){
+    nav ul{
+        min-width: 300px;
+        margin: 0;
+    }
+    nav ul a{
+        padding: 5px 10px;
+
+    }
+}
+/*----------- Upload Form ----------------*/
+.style{
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background: black;
+    flex-direction: column;
+}
+.file_upload{
+    width: 400px;
+    height: 445px;
+    margin: 20px;
+    margin-top: 70px;
+    box-shadow: 0 0 5px white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: fade 1s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.file_upload .header1{
+    width: 100%;
+    height: 145px;
+    background:teal;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+.file_upload .header1 p{
+    color: #fff;
+}
+.file_upload .header1 p i.fas{
+    margin-right: 10px;
+
+}
+.file_upload .header1 p span{
+    font-size: 2rem;
+    font-weight: 100;
+}
+.file_upload .header1 p span span{
+    font-weight: 600;
+
+}
+.file_upload .body{
+    background: white;
+    width: 100%;
+    height: calc(100% - 145px);
+    border-radius: 0 0 5x 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+}
+.file_upload .body input[type="file"]{
+    opacity: 0;
+
+}
+.file_upload .body i.fas{
+    color: #c2bbbb;
+    margin-bottom: 20px;
+
+}
+.file_upload .body p strong{
+    color: black;
+}
+.file_upload .body p span{
+    color: black;
+    text-decoration: underline;
+}
+.file_upload .body p span:hover{
+    color: teal;
+}
+.btn{
+    background: teal;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    padding: .7rem 2rem;
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 3px;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn:hover{
+    opacity: 1;
+}
+@media(max-width: 1000px){
+    .file_upload{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+}
+@media(max-width: 640px){
+    .file_upload{
+        width: 300px;
+        margin-top: 45px;
+        text-align: center;
+    }
+}
+@media(max-width:568px){
+    .file_upload{
+        width: 300px;
+        margin-top: 80px;
+    }
+}
